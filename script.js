@@ -4,9 +4,10 @@
       let users = await data.json();
       console.log(users);
       users.forEach((element) => {
-        let  = document.querySelector(".container");
+        let container = document.querySelector(".container");
         container.innerHTML += `<div
-      class="card"
+      class="card d-flex justify-content-center flex-column"
+      style="flex-basis: 20%"
     >
       <img class="card-img-top" alt="Card image cap" />
       <h4 class="card-title">${element.name}</h4>
