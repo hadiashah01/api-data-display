@@ -9,7 +9,7 @@
       class="card d-flex justify-content-center flex-column"
       style="flex-basis: 20%"
     >
-      <img class="card-img-top rounded-circle mx-auto" src="" alt="Card image cap" />
+      <img class="card-img-top rounded-circle mx-auto" src="./assets/profile-img-${element.id}.png" alt="Card image cap" />
       <h4 class="card-title text-center my-4 lh-base">${element.name}</h4>
       <p class="email my-0 mx-auto lh-base mb-2"><strong>Email: </strong>${element.email}</p>
       <p class="city my-0 mx-auto lh-base mb-2"><strong>City: </strong>${element.address.city}</p>
