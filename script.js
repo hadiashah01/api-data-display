@@ -1,11 +1,11 @@
- let url = "https://jsonplaceholder.typicode.com/users";
-    let response = async () => {
-      let data = await fetch(url);
-      let users = await data.json();
-      console.log(users);
-      users.forEach((element) => {
-        let container = document.querySelector(".container");
-        container.innerHTML += `<div
+let url = "https://jsonplaceholder.typicode.com/users";
+let response = async () => {
+  let data = await fetch(url);
+  let users = await data.json();
+  console.log(users);
+  users.forEach((element) => {
+    let container = document.querySelector(".container");
+    container.innerHTML += `<div
       class="card d-flex justify-content-center flex-column"
       style="flex-basis: 20%"
     >
@@ -14,9 +14,8 @@
       <p class="email my-0 mx-auto lh-sm mb-2"><strong>Email: </strong>${element.email}</p>
       <p class="city my-0 mx-auto lh-sm mb-2"><strong>City: </strong>${element.address.city}</p>
       <p class="website my-0  mx-auto lh-sm mb-2"><strong>Website: </strong>${element.website}</p>
-      <a href="#" class="btn btn-warning">View Profile</a>
+      <a href="profile.html?id=${element.id}" class="btn btn-warning">View Profile</a>
     </div>`;
-      });
-    };
-
-    response();
+  });
+};
+response();
