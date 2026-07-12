@@ -30,7 +30,9 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><span>Username :</span> Moriah.Stanton</li>
-        <li class="list-group-item"><span>Email :</span> Rey.Padberg@karina.biz</li>
+        <li class="list-group-item">
+          <span>Email :</span> Rey.Padberg@karina.biz
+        </li>
         <li class="list-group-item"><span>City :</span> Lebsackbury</li>
         <li class="list-group-item"><span>Zipcode :</span> 31428-2261</li>
         <li class="list-group-item"><span>Phone : </span>024-648-3804</li>
@@ -42,18 +44,5 @@
       </div>
     </div>
   </body>
-  <script>
-    const profileURL = window.location.search;
-    const params = new URLSearchParams(profileURL);
-    const id = params.get("id");
-    const apiURL = `https://jsonplaceholder.typicode.com/users/${id}`;
-    let result = async () => {
-      const response = await fetch(apiURL);
-      const data = await response.json();
-      console.log(data);
-      let title = document.querySelector("title");
-      title.innerHTML = `${data.name}`;
-    };
-    result();
-  </script>
+<script src="./profile.script.js"></script>
 </html>
