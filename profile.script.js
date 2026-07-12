@@ -3,6 +3,7 @@ const params = new URLSearchParams(profileURL);
 const id = params.get("id");
 const apiURL = `https://jsonplaceholder.typicode.com/users/${id}`;
 let result = async () => {
+  const loading = document.getElementById("loading");
   const response = await fetch(apiURL);
   const data = await response.json();
   console.log(data);
@@ -10,6 +11,7 @@ let result = async () => {
   title.innerHTML = `${data.name}`;
   const cardTitle = document.querySelector(".card-title");
   cardTitle.innerText = data.name;
+  loading.style.display = "none";
   const img = document.querySelector(".card-img-top");
   img.setAttribute("src", `./assets/profile-img-${data.id}.png`);
   const cardText = document.querySelector(".card-text");

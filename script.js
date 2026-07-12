@@ -4,6 +4,8 @@ let response = async () => {
   let users = await data.json();
   console.log(users);
   users.forEach((element) => {
+    let loading = document.getElementById("loading");
+    loading.style.display = "none";
     let container = document.querySelector(".container");
     container.innerHTML += `<div
       class="card d-flex justify-content-center flex-column"
