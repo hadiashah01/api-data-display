@@ -10,9 +10,37 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <img
+      style="border-radius: 50%"
+      src="./assets/profile-img-1.png"
+      class="card-img-top"
+      alt="user profile image"
+    />
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">Clementina DuBuque</h5>
+        <p class="card-text">
+          Hey there, I'm Clementina DuBuque! My company's mission is centralized
+          empowering task-force. Below you can see my details & contact
+          information
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><span>Username :</span> Moriah.Stanton</li>
+        <li class="list-group-item"><span>Email :</span> Rey.Padberg@karina.biz</li>
+        <li class="list-group-item"><span>City :</span> Lebsackbury</li>
+        <li class="list-group-item"><span>Zipcode :</span> 31428-2261</li>
+        <li class="list-group-item"><span>Phone : </span>024-648-3804</li>
+        <li class="list-group-item"><span>Website :</span> ambrose.net</li>
+        <li class="list-group-item"><span>Company :</span> Hoeger LLC</li>
+      </ul>
+      <div class="card-body">
+        <a href="./index.html" class="card-link">Back to Directory</a>
+      </div>
+    </div>
+  </body>
   <script>
     const profileURL = window.location.search;
     const params = new URLSearchParams(profileURL);
