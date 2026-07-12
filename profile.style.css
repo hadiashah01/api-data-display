@@ -1,6 +1,8 @@
 img {
-  max-width: 30%;
+  
   margin-block: 5vw;
+   flex-basis: 30%;
+   max-width: 25em;
 }
 body {
   justify-content: center;
@@ -10,13 +12,15 @@ body {
   background-color: #4a1521;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
+  flex-wrap: wrap;
 }
 .card {
-  min-width: 50vw;
-  max-width: 50vw;
-  padding: 20px 50px;
+  flex-basis: 50%;
+  padding: 1rem ;
   border: 2px solid rgb(64, 255, 179);
   border-radius: 20px;
+  color: #2c0e14;
+  font-size: 0.8rem;
 }
 a {
   color: rgb(21, 61, 85);
@@ -24,10 +28,38 @@ a {
   line-height: 2;
 }
 span,
-a {
+.card-link {
   font-weight: 600;
+}
+.card-link {
+  margin:1em;
+  margin-block: .8em;
+  font-size: .8rem;
+  font-weight: 400;
 }
 .card-btn:hover .card-link {
   opacity: 95%;
   text-decoration: underline;
+}
+@media (max-width:800px) {
+  body{
+    gap: 1em;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+.card {
+  min-width: 70%;
+  font-size: .8em;
+  padding: .7em;
+}
+.card h3,p {
+  text-align: center;
+}
+.card-img-top {
+  margin:auto ;
+ margin-top: 260px;
+  min-width: 17em;
+  max-width: 19em;
+}
+
 }
