@@ -1,13 +1,15 @@
 let url = "https://jsonplaceholder.typicode.com/users";
 let response = async () => {
-  let data = await fetch(url);
-  let users = await data.json();
-  console.log(users);
-  users.forEach((element) => {
-    let loading = document.getElementById("loading");
-    loading.style.display = "none";
-    let container = document.querySelector(".container");
-    container.innerHTML += `<div
+  let container = document.querySelector(".container");
+  try {
+    let data = await fetch(url);
+    if (!data.ok) throw Error("Something went wrong. Please refresh the page");
+    let users = await data.json();
+    console.log(users);
+    users.forEach((element) => {
+      let loading = document.getElementById("loading");
+      loading.style.display = "none";
+      container.innerHTML += `<div
       class="card d-flex justify-content-center flex-column"
       style="flex-basis: 20%"
     >
@@ -18,6 +20,9 @@ let response = async () => {
       <p class="website my-0  mx-auto lh-sm mb-2"><strong>Website: </strong>${element.website}</p>
       <a href="profile.html?id=${element.id}" class="btn btn-warning">View Profile</a>
     </div>`;
-  });
+    });
+  } catch (err) {
+    container.innerHTML = `<div class="text-light text-center">Something went wrong. Please refresh the page.</div>`;
+  }
 };
 response();
