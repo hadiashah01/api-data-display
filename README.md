@@ -60,6 +60,7 @@ user-directory/
 │   ├── profile-img-1.png
 │   ├── profile-img-2.png
 │   └── ...
+├── preview-images.md
 │
 ├── index.html
 ├── script.js
