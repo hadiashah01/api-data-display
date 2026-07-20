@@ -24,7 +24,7 @@ A responsive user directory built with **HTML5, CSS3, Bootstrap 5, and JavaScrip
 
 Click the preview image below to visit the live interactive demo:
 
-[![User Directory Live Webpage Preview](./assets/user-directory-laptop-view.png)](https://hadiashah01.github.io/the-kitchen-garden/)
+[![User Directory Live Webpage Preview](./assets/user-directory-laptop-view.png)](https://hadiashah01.github.io/user-directory/)
 
 
 👉 **[Click here to view all device previews](preview-images.md)**
